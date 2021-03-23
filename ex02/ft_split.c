@@ -34,7 +34,6 @@ int count_word(char *str, char *charset)
         if (len_word)
             n++;
     }
-    printf("%d\n", n);
     return (n);
 }
 
@@ -53,7 +52,6 @@ char *ft_strcpy(char *str, int len)
         n++;
     }
     dest[n] = '\0';
-    printf("dest: %s\n", dest);
     return (dest);
 }
 
@@ -73,7 +71,6 @@ char **ft_split(char *str, char *charset)
         while (*str && check_sep(str, charset))
             str++;
         word_len = ft_strlen(str, charset);
-        printf("wk%d: %d\n", i, word_len);
         if (!(split[i] = ft_strcpy(str, word_len)))
             return (NULL);
         str += word_len;
